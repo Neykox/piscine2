@@ -1,5 +1,12 @@
+int check(int grille[8][8], position)
+{
+	int lig;
+	int col;
+}
+
 int ft_eight_queens_puzzle(void)
 {
+	int compt;
 	int grille[8][8] = 
 	{
 		{0, 0, 0, 0, 0, 0, 0, 0},
@@ -11,10 +18,14 @@ int ft_eight_queens_puzzle(void)
 		{0, 0, 0, 0, 0, 0, 0, 0},
 		{0, 0, 0, 0, 0, 0, 0, 0},
 	};
-	valide(grille, 0);
+
+	compt = 0;
+	check(grille, 0);
+	return compt;
 }
 
-int valide(grille[8][8], int position)
+int main()
 {
-
+	ft_eight_queens_puzzle();
+	return 0;
 }
