@@ -4,20 +4,20 @@
 
 
 // Fonction d'affichage
-void affichage (int grille[9][9])
-{
-    for (int i=0; i<9; i++)
-    {
-        for (int j=0; j<9; j++)
-        {
-            printf( ((j+1)%3) ? "%d " : "%d|", grille[i][j]);
-        }
-        putchar('\n');
-        if (!((i+1)%3))
-            puts("------------------");
-    }
-    puts("\n\n");
-}
+// void affichage (int grille[9][9])
+// {
+//     for (int i=0; i<9; i++)
+//     {
+//         for (int j=0; j<9; j++)
+//         {
+//             printf( ((j+1)%3) ? "%d " : "%d|", grille[i][j]);
+//         }
+//         putchar('\n');
+//         if (!((i+1)%3))
+//             puts("------------------");
+//     }
+//     puts("\n\n");
+// }
 
 bool absentSurLigne (int k, int grille[9][9], int i)
 {
@@ -52,8 +52,7 @@ bool estValide (int grille[9][9], int position)
 
     int i = position/9, j = position%9;
 
-    if (grille[i][j] != 0)
-        return estValide(grille, position+1);
+     
 
     for (int k=1; k <= 9; k++)
     {
@@ -66,30 +65,29 @@ bool estValide (int grille[9][9], int position)
         }
     }
     grille[i][j] = 0;
-
     return false;
 }
 
-int main (void)
-{
-    int grille[9][9] =
-    {
-        {9,0,0,1,0,0,0,0,5},
-        {0,0,5,0,9,0,2,0,1},
-        {8,0,0,0,4,0,0,0,0},
-        {0,0,0,0,8,0,0,0,0},
-        {0,0,0,7,0,0,0,0,0},
-        {0,0,0,0,2,6,0,0,9},
-        {2,0,0,3,0,0,0,0,6},
-        {0,0,0,2,0,0,9,0,0},
-        {0,0,1,9,0,4,5,7,0}
-    };
+// int main (void)
+// {
+//     int grille[9][9] =
+//     {
+//         {9,0,0,1,0,0,0,0,5},
+//         {0,0,5,0,9,0,2,0,1},
+//         {8,0,0,0,4,0,0,0,0},
+//         {0,0,0,0,8,0,0,0,0},
+//         {0,0,0,7,0,0,0,0,0},
+//         {0,0,0,0,2,6,0,0,9},
+//         {2,0,0,3,0,0,0,0,6},
+//         {0,0,0,2,0,0,9,0,0},
+//         {0,0,1,9,0,4,5,7,0}
+//     };
 
-    printf("Grille avant\n");
-    affichage(grille);
+//     printf("Grille avant\n");
+//     affichage(grille);
 
-    estValide(grille,0);
+//     estValide(grille,0);
 
-    printf("Grille apres\n");
-    affichage(grille);
-}
+//     printf("Grille apres\n");
+//     affichage(grille);
+// }
