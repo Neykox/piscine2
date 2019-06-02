@@ -24,7 +24,7 @@ int ft_eight_queens_puzzle(void)
 		{0, 0, 0, 0, 0, 0, 0, 0},
 		{0, 0, 0, 0, 0, 0, 0, 0},
 		{0, 0, 0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 0, 0, 0, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0, 0}
 	};
 	valide(grille, 0, compt);
 	ft_putchar(compt + 48);
